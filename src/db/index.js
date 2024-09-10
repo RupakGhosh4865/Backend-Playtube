@@ -4,10 +4,11 @@ import mongoose from "mongoose";
 async function connectToDatabase() {
   try {
     const connectionInstance = await mongoose.connect(
-      `${process.env.MONGODB_URL}/${DB_NAME}`
+      `${process.env.MONGODB_URL}/${DB_NAME}`||"mongodb+srv://cluster0:rupak@cluster0.lieknki.mongodb.net"
+      // Options object
     );
     console.log(
-      `MONGODB Connected!! DB Host : ${connectionInstance?.connection.host}`
+      `MONGODB Connected!! DB Host : ${connectionInstance.connection.host}`
     );
   } catch (err) {
     console.log("MONGODB CONNECTION FAILED :: ", err);
@@ -16,22 +17,3 @@ async function connectToDatabase() {
 }
 
 export default connectToDatabase;
-
-// async function connectToDatabase() {
-//   try {
-//     const connectionInstance = await mongoose.connect(
-//       `${process.env.DATABASE_URL}/${DB_NAME}`
-//     );
-
-//     console.log(
-//       `MONGODB Connected!! DB Host : ${connectionInstance.connection.host}\n${connectionInstance}`
-//     );
-
-//     app.listen(process.env.PORT, () => {
-//       console.log("Server is running on Port ", process.env.PORT);
-//     });
-//   } catch (err) {
-//     console.log("MONGODB CONNECTION FAILED :: ", err);
-//     process.exit(1);
-//   }
-// }
