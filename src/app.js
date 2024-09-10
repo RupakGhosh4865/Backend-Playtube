@@ -7,7 +7,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: [ "https://frontend-playtube.vercel.app/"],
+    origin: [ "https://backend-playtubes.onrender.com/api/v1"],
     credentials: true,
   })
 );
