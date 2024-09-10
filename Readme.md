@@ -8,10 +8,10 @@
 
 | Content           | Link                                                                             |
 | ----------------- | -------------------------------------------------------------------------------- |
-| Live Link         | [click here](https://playtube-by-yashpz.vercel.app)                              |
-| API Documentation | [click here](https://documenter.getpostman.com/view/32807699/2sA3XPChSM)         |
-| Model             | [click here ](https://app.eraser.io/workspace/cATefMPkrAdzR9c6teox?origin=share) |
-| Frontend          | [click here ](https://github.com/Yash-Zanzarukiya/PlayTube-Frontend)             |
+| Live Link         | [click here]()                              |
+| API Documentation | [click here]()         |
+| Model             | [click here ]() |
+| Frontend          | [click here ]()             |
 
 ## Features
 
