@@ -7,11 +7,13 @@ const app = express();
 
 app.use(
   cors({
-    origin: [ "https://frontend-playtube.vercel.app/"],
+    origin: [ "https://frontend-playtube.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization']
   })
 );
-// origin: process.env.CORS_ORIGIN,
+ origin: process.env.CORS_ORIGIN,
 
 app.use(express.json({ limit: "99mb" }));
 app.use(express.urlencoded({ extended: true, limit: "99mb" }));
